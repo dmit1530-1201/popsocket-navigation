@@ -1,0 +1,119 @@
+body {
+    color: #00263e;
+    background-image: linear-gradient(rgba(255,105,180,1), rgba(255,186,0,1));
+    font-family: 'Nunito', sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner-container {
+    padding: 1rem;
+}
+
+/* *************** typography ********************** */
+h1 a {
+    color: #00263e;
+    text-decoration: none;
+}
+
+h1 {
+    letter-spacing: 5px;
+}
+
+h1::first-letter {
+    color: rgba(255,105,180);
+}
+
+h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* *************** header ********************** */
+header {
+    background-color: #fff;
+}
+
+.menu-icon {
+    width: 2.5rem;
+    text-align: center;
+}
+
+.main-menu li {
+    line-height: 85px;
+    border-bottom: 1px solid #e3eaf3;
+}
+
+.main-menu li:last-of-type {
+    border-bottom: none;
+}
+
+.main-menu a {
+    text-decoration: none;
+    display: block;
+    color: #f89d70;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 0.625rem;
+}
+
+/* active state for mobile click conformation */
+.main-menu a:hover,
+.main-menu a:active {
+    background-color: #e3eaf3;
+    border-radius: 5px;
+}
+
+a.first-link {
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.main-menu svg {
+    width: 15px;
+}
+
+.main-menu svg:first-of-type {
+    margin-right: 1rem;
+}
+
+.main-menu svg:last-of-type {
+    margin-left: auto;
+}
+
+/* Hide and show the hover dropdown menu */
+.dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+/* what do you hover over? --> first selector with :hover
+what do you want to change --> second selector */
+.main-menu li:hover > .dropdown-menu {
+    max-height: 100vh;
+    overflow: visible;
+}
+
+/* Hide and show the main nav with a toggle, click icon */
+nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    /* add absolute positioning to have the nav overlay the content when showing */
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    width: 100vw;
+}
+
+/* special class to show the nav, and it only exists here in the CSS */
+.active-nav {
+    max-height: 100vh;
+    overflow: visible;
+}
